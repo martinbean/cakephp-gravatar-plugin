@@ -13,9 +13,9 @@ class GravatarHelper extends AppHelper {
         );
         $options = array_merge($defaults, $options);
         
-        $url = "http://www.gravatar.com/avatar/";
+        $url = 'http://www.gravatar.com/avatar/';
         $url.= md5($email);
-        $url.= sprintf("?s=%d&d=%s&r=%s", $options['size'], $options['default'], $options['rating']);
+        $url.= sprintf('?s=%d&d=%s&r=%s', $options['size'], $options['default'], $options['rating']);
         
         if($this->validate_gravatar($email))
         {
